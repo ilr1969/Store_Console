@@ -70,10 +70,12 @@ namespace Store_Console
             {
                 Console.WriteLine("Введите имя клиента:");
                 User user = new User(Console.ReadLine());
-                Order order = new Order(Basket, user.Name);
+                var UserBasket = Basket.GetRange(0, Basket.Count);
+                Order order = new Order(UserBasket, user.Name);
                 Orders.Add(order);
                 Basket.Clear();
             }
+            
 
         }
         public class Product
@@ -110,12 +112,15 @@ namespace Store_Console
             }
             public void ShowClient()
             {
-                Console.WriteLine($"Клиент {User}");
+                Store s = new Store();
+                Console.WriteLine("---------------------------------------------------------");
+                Console.WriteLine($"Клиент: {User}");
                 foreach (var i in Products)
                 {
                     Console.WriteLine($"{i.Name}, {i.Price}");
                 }
                 Console.WriteLine($"Общая сумма: {Result}");
+                Console.WriteLine("---------------------------------------------------------");
             }
         }
 
