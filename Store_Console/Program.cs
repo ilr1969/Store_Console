@@ -142,9 +142,8 @@ namespace Store_Console
                 Console.WriteLine("2. Добавить товар в корзину.");
                 Console.WriteLine("3. Посмотреть корзину.");
                 Console.WriteLine("4. Оформить заказ.");
-                Console.WriteLine("5. Посмотреть заказ клиента.");
+                Console.WriteLine("5. Посмотреть заказы клиентов.");
                 Console.WriteLine("6. Добавить товар в магазин");
-
                 Console.WriteLine("0. Выйти.");
                 Console.WriteLine();
                 Console.WriteLine("Выберите номер действия, которое хотите совершить.");
